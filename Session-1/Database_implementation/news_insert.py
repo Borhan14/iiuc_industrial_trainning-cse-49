@@ -190,7 +190,9 @@ def insert_summary(connection, news_id, summary_text):
 if __name__ == "__main__":
     conn = create_db_connection()
     if conn is not None:
-        #insert_category(conn, "Politics", "All news related to politics")
+        insert_category(conn, "Politics", "All news related to politics")
         insert_reporters(conn, "John Doe", "test@example.com", "01863746364", "borhan", "borhan04")
         insert_publishers(conn, "YOO YOOO", "yo@example.com")
+        insert_news(conn, 1, 1, 1, "2022-05-06 00:03:04", "News Article 1", "Body of the first news article.", "https://example.com/news-article-1")
+        insert_image(conn, 1, "https://upload.wikimedia.org/wikipedia/commons/0/09/INews.png")
         # Add more insert calls for other tables
